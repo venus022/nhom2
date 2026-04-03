@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
   res.json(getData());
 });
 
-// 🔥 dynamic route
+// dynamic route
 router.get("/:id", (req, res) => {
   const id = +req.params.id;
   const products = getData();
