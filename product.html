@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .detail-container {
+      max-width: 900px;
+      margin: 40px auto;
+      display: flex;
+      gap: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .detail-img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .detail-info {
+      flex: 1;
+    }
+
+    .detail-info h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .detail-price {
+      font-size: 24px;
+      color: red;
+      margin: 15px 0;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 15px;
+      background: #3498db;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center">Chi tiết sản phẩm</h1>
+
+<div id="productDetail"></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+fetch(`/api/products/${id}`)
+  .then(res => res.json())
+  .then(product => {
+    document.getElementById("productDetail").innerHTML = `
+      <div class="detail-container">
+        <img src="${product.image}" class="detail-img"/>
+        <div class="detail-info">
+          <h2>${product.name}</h2>
+          <div class="detail-price">
+            ${product.price.toLocaleString()}₫
+          </div>
+          <p>Sản phẩm chất lượng cao, bảo hành uy tín 🔥</p>
+          <a href="nhom2.html" class="back-btn">← Quay lại</a>
+        </div>
+      </div>
+    `;
+  })
+  .catch(err => console.log(err));
+</script>
+
+</body>
+</html> 

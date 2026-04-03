@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa hàng online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 style="font-size: 50px; font-weight: bold; color: rgb(0, 0, 0);">
+  Đức An Store
+</h1>
+  <div id="message" class="message"></div>  
+  
+  <div class="app">
+    <button id="toggleCart" class="toggle-cart">🛒</button>
+    <div class="main-layout">
+      <div class="products-section">
+        <h2>Sản phẩm</h2>
+        <div id="products" class="products-list"></div>
+      </div>
+
+      <div class="cart-section" id="cartSection">
+        <h3>🛒 Giỏ hàng</h3>
+        <ul id="cart"></ul>
+        <div class="cart-total">
+          <strong>Tổng: <span id="total">0₫</span></strong>
+        </div>
+        <button id="checkout">Thanh toán</button>
+        <button id="clearCart">Xóa</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="page.js"></script>
+</body>
+</html>

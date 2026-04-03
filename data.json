@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Dell",
+    "price": 10000000,
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_659_3__6.png"
+  },
+  {
+    "id": 2,
+    "name": "Chuột Logitech",
+    "price": 500000,
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/c/h/chuot-khong-day-cong-thai-hoc-logitech-lift-vertical_1_.png"
+  },
+  {
+    "id": 3,
+    "name": "Bàn phím Corsair",
+    "price": 2000000,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Màn hình LG 27\"",
+    "price": 5000000,
+    "image": ""
+  }
+]
